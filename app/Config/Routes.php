@@ -31,7 +31,10 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index', ['filter' => 'auth']);
+//$routes->get('/', 'Home::index', ['filter' => 'auth']);
+$routes->addPlaceholder('slug', '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*');
+$routes->get('/', 'Home::index');
+$routes->get('/admin', 'AdminController::index');
 
 /*
  * --------------------------------------------------------------------

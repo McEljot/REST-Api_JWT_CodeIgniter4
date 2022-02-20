@@ -95,5 +95,5 @@ class Autoload extends AutoloadConfig
      *
      * @var array
      */
-    public $helpers = ['form','cookie','date','url'];
+    public $helpers = ['form','cookie','date','url','file','text'];
 }
